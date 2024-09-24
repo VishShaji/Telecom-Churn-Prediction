@@ -6,7 +6,7 @@
 
 This project focuses on predicting customer churn for an Iranian telecom company using advanced machine learning techniques. By identifying key factors leading to customer churn, businesses can proactively address at-risk customers and enhance retention strategies. 
 
-We employ cutting-edge models such as **XGBoost** and **SMOTE** to handle imbalanced data, and interpret results using **SHAP** for explainability.
+We employ cutting-edge models such as **XGBoost** to handle imbalanced data, and interpret results using **SHAP** for explainability.
 
 ## 📊 Dataset
 
