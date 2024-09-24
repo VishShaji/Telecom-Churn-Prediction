@@ -101,12 +101,6 @@ The confusion matrix shows the model’s performance in classifying churned vs. 
 - **Real-Time Prediction Pipeline**: Deploy the model as an API for real-time customer churn predictions.
 - **Segmentation**: Explore customer segmentation techniques for more personalized retention strategies.
 
-## 🏅 Why This Project Stands Out for Recruiters
-
-- **Business Impact**: Directly translates machine learning into actionable business insights.
-- **Technical Complexity**: Utilizes advanced algorithms like XGBoost, along with SMOTE for class balancing and SHAP for explainability.
-- **Clean and Scalable Code**: Ready to be adapted for larger datasets and other business use cases.
-
 ## 🤝 Contributions
 
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or features you'd like to add.
