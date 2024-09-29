@@ -82,7 +82,7 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
    - **Time Efficiency**: RandomSearchCV was much faster than GridSearchCV without compromising model performance.
    - **GridSearchCV vs RandomSearchCV**: 
 
-     ![Text_GridTime_vs_RandomTime](grid_vs_random.png)
+     ![Text_GridTime_vs_RandomTime](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/grid_vs_random.png)
  
      RandomSearchCV allows for more exploration of the parameter space, making it more efficient in practice for large datasets.
 
