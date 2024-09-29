@@ -12,6 +12,8 @@ We employ cutting-edge models such as **XGBoost** to handle imbalanced data, and
 
 The dataset includes various features such as customer demographics, usage metrics (call durations, unique numbers called, etc.), and a churn label indicating whether the customer has left the service.
 
+![Data head](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/data_head.png)
+
 More details can be found at the [UCI Repository](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset).
 
 ## 📈 Key Features
@@ -38,17 +40,17 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
 2. **Univariate Analysis**: Each variable is analyzed individually to visualize the distribution.
 3. **Bivariate Analysis**: Age and churn are analyzed against other features, and visualized to help uncover patterns. 
    
-   ![Age vs Churn](path-to-age-vs-churn)
-   ![Age vs Churn](path-to-age-vs-churn)
+   ![Age](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/age_bivar.png))
+   ![Age]((https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/churn_bivar.png))
 
    
 4. **Multicollinearity (VIF Analysis)**: Variance Inflation Factor (VIF) is calculated to check for multicollinearity in features.
 
-   ![VIF Values](path-to-vif-values)
+   ![VIF Values](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/vif.png)
    
 5. **Correlation Heatmap**: Helps identify strong correlations between features.
 
-   ![Correlation Heatmap](path-to-correlation-heatmap)
+   ![Correlation Heatmap](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/corr.png)
 
 6. **Model Training**: XGBoost is employed as the primary classifier, with RandomSearchCV used for hyperparameter optimization. 
 
@@ -63,8 +65,8 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
    - **F1-Score**: `0.861`
    - **ROC-AUC**: `0.9868`
 
-     ![ROC Curve - GridSearchCV](path-to-grid-roc-curve)
-     ![Confusion Matrix - GridSearchCV](path-to-grid-confusion-matrix)
+     ![ROC Curve - GridSearchCV](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/roc_grid.png)
+     ![Confusion Matrix - GridSearchCV](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/confusion_grid.png)
 
    **RandomSearchCV Model Performance:**
    - **Accuracy**: `0.958`
@@ -73,26 +75,20 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
    - **F1-Score**: `0.863`
    - **ROC-AUC**: `0.9848`
 
-     ![ROC Curve - RandomSearchCV](path-to-random-roc-curve)
-     ![Confusion Matrix - RandomSearchCV](path-to-random-confusion-matrix)
+     ![ROC Curve - RandomSearchCV](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/roc_random.png)
+     ![Confusion Matrix - RandomSearchCV](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/confusion_random.png)
 
 9. **Justification for RandomSearchCV**:
    - **Time Efficiency**: RandomSearchCV was much faster than GridSearchCV without compromising model performance.
    - **GridSearchCV vs RandomSearchCV**: 
 
-     ![Text_GridTime_vs_RandomTime](path-to-random-roc-curve)
+     ![Text_GridTime_vs_RandomTime](grid_vs_random.png)
  
      RandomSearchCV allows for more exploration of the parameter space, making it more efficient in practice for large datasets.
 
 10. **Model Explainability with SHAP**: SHAP values are used to interpret individual predictions and feature importance.
 
 11. **Saved Model Evaluation**: Evaluation of saved models on a sample of 100 customers for deployment readiness.
-   
-   - **Accuracy**: `0.98`
-   - **Precision**: `0.875`
-   - **Recall**: `1`
-   - **F1-Score**: `0.933`
-   - **ROC-AUC**: `0.9983`
 
 ## 📊 Results and Visualizations
 
@@ -149,7 +145,7 @@ Efforts should focus on:
 ### SHAP Summary Plot
 This plot shows the impact of each feature on the model’s output.
 
-![SHAP Summary Plot](path-to-shap-summary-plot)
+![SHAP Summary Plot](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/shap.png)
 
 
 ## 🛠️ Installation & Setup
@@ -180,15 +176,19 @@ Follow these steps to set up the project on your local machine:
 
 ## 📊 Model Evaluation
 
+The final chosen model is saved and the saved `.joblib` model file is loaded to verify correct working. It's performance is evaluated on 100 data rows.
+
 - **Accuracy**: How well the model predicts overall.
 - **Precision & Recall**: Measuring the trade-off between false positives and false negatives.
 - **F1-Score**: Balances precision and recall.
 - **ROC-AUC**: Area under the curve, measuring model performance.
 
-### Confusion Matrix
-The confusion matrix shows the model’s performance in classifying churned vs. non-churned customers.
+   - **Accuracy**: `0.98`
+   - **Precision**: `0.875`
+   - **Recall**: `1`
+   - **F1-Score**: `0.933`
+   - **ROC-AUC**: `0.9983`
 
-![Confusion Matrix](path-to-confusion-matrix)
 
 ## 🚀 Future Improvements
 
