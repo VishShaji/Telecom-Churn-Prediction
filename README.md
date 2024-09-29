@@ -56,7 +56,7 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
 
 8. **Model Evaluation**: Accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrix are computed for both GridSearchCV and RandomSearchCV models.
 
-   - **GridSearchCV Model Performance:**
+   **GridSearchCV Model Performance:**
    - **Accuracy**: `0.958`
    - **Precision**: `0.802`
    - **Recall**: `0.931`
@@ -66,12 +66,12 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
      ![ROC Curve - GridSearchCV](path-to-grid-roc-curve)
      ![Confusion Matrix - GridSearchCV](path-to-grid-confusion-matrix)
 
-   - **RandomSearchCV Model Performance:**
-     - Accuracy: `Y`
-     - Precision: `Y`
-     - Recall: `Y`
-     - F1-Score: `Y`
-     - ROC-AUC: `Y`
+   **RandomSearchCV Model Performance:**
+   - **Accuracy**: `0.958`
+   - **Precision**: `0.796`
+   - **Recall**: `0.942`
+   - **F1-Score**: `0.863`
+   - **ROC-AUC**: `0.9848`
 
      ![ROC Curve - RandomSearchCV](path-to-random-roc-curve)
      ![Confusion Matrix - RandomSearchCV](path-to-random-confusion-matrix)
@@ -88,11 +88,11 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
 
 11. **Saved Model Evaluation**: Evaluation of saved models on a sample of 100 customers for deployment readiness.
    
-   - **Accuracy**: `0.958`
-   - **Precision**: `0.802`
-   - **Recall**: `0.931`
-   - **F1-Score**: `0.861`
-   - **ROC-AUC**: `0.9868`
+   - **Accuracy**: `0.98`
+   - **Precision**: `0.875`
+   - **Recall**: `1`
+   - **F1-Score**: `0.933`
+   - **ROC-AUC**: `0.9983`
 
 ## 📊 Results and Visualizations
 
