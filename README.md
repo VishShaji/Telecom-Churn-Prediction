@@ -1,6 +1,6 @@
 # 🚀 Telecom Customer Churn Prediction Project 🚀
 
-![Project Logo](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/Customer_Churn_Prediction_Models_in_Machine_Learning.png)
+![Project Logo](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/Customer_Churn_Prediction_Models.png)
 
 ## Overview
 
