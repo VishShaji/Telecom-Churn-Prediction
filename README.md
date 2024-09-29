@@ -41,7 +41,7 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
 3. **Bivariate Analysis**: Age and churn are analyzed against other features, and visualized to help uncover patterns. 
    
    ![Age](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/age_bivar.png))
-   ![Age]((https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/churn_bivar.png))
+   ![Churn](https://github.com/VishShaji/Telecom-Churn-Prediction/blob/main/assets/churn_bivar.png)
 
    
 4. **Multicollinearity (VIF Analysis)**: Variance Inflation Factor (VIF) is calculated to check for multicollinearity in features.
