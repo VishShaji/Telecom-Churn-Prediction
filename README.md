@@ -35,30 +35,33 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
 ## 🔬 How It Works
 
 1. **Data Preprocessing**: The dataset is cleaned, scaled, and preprocessed to handle missing data and outliers.
-2. **Bivariate Analysis**: Age and churn are analyzed, and visualizations help uncover patterns. 
+2. **Univariate Analysis**: Each variable is analyzed individually to visualize the distribution.
+3. **Bivariate Analysis**: Age and churn are analyzed against other features, and visualized to help uncover patterns. 
    
    ![Age vs Churn](path-to-age-vs-churn)
+   ![Age vs Churn](path-to-age-vs-churn)
+
    
-3. **Multicollinearity (VIF Analysis)**: Variance Inflation Factor (VIF) is calculated to check for multicollinearity in features.
+4. **Multicollinearity (VIF Analysis)**: Variance Inflation Factor (VIF) is calculated to check for multicollinearity in features.
 
    ![VIF Values](path-to-vif-values)
    
-4. **Correlation Heatmap**: Helps identify strong correlations between features.
+5. **Correlation Heatmap**: Helps identify strong correlations between features.
 
    ![Correlation Heatmap](path-to-correlation-heatmap)
 
-5. **Model Training**: XGBoost is employed as the primary classifier, with RandomSearchCV used for hyperparameter optimization. 
+6. **Model Training**: XGBoost is employed as the primary classifier, with RandomSearchCV used for hyperparameter optimization. 
 
-6. **Churn Prediction**: Predictions are made on customer data to identify potential churners.
+7. **Churn Prediction**: Predictions are made on customer data to identify potential churners.
 
-7. **Model Evaluation**: Accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrix are computed for both GridSearchCV and RandomSearchCV models.
+8. **Model Evaluation**: Accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrix are computed for both GridSearchCV and RandomSearchCV models.
 
    - **GridSearchCV Model Performance:**
-     - Accuracy: `X`
-     - Precision: `X`
-     - Recall: `X`
-     - F1-Score: `X`
-     - ROC-AUC: `X`
+   - **Accuracy**: `0.958`
+   - **Precision**: `0.802`
+   - **Recall**: `0.931`
+   - **F1-Score**: `0.861`
+   - **ROC-AUC**: `0.9868`
 
      ![ROC Curve - GridSearchCV](path-to-grid-roc-curve)
      ![Confusion Matrix - GridSearchCV](path-to-grid-confusion-matrix)
@@ -73,39 +76,81 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
      ![ROC Curve - RandomSearchCV](path-to-random-roc-curve)
      ![Confusion Matrix - RandomSearchCV](path-to-random-confusion-matrix)
 
-8. **Justification for RandomSearchCV**:
+9. **Justification for RandomSearchCV**:
    - **Time Efficiency**: RandomSearchCV was much faster than GridSearchCV without compromising model performance.
    - **GridSearchCV vs RandomSearchCV**: 
 
-     ```text
-     GridSearchCV took X minutes while RandomSearchCV completed in Y minutes, showing a significant reduction in computation time.
-     ```
+     ![Text_GridTime_vs_RandomTime](path-to-random-roc-curve)
+ 
      RandomSearchCV allows for more exploration of the parameter space, making it more efficient in practice for large datasets.
 
-9. **Model Explainability with SHAP**: SHAP values are used to interpret individual predictions and feature importance.
+10. **Model Explainability with SHAP**: SHAP values are used to interpret individual predictions and feature importance.
 
-   ![SHAP Summary Plot](path-to-shap-summary-plot)
-   ![SHAP Dependence Plot](path-to-shap-dependence-plot)
-
-10. **Saved Model Evaluation**: Evaluation of saved models on a sample of 100 customers for deployment readiness.
+11. **Saved Model Evaluation**: Evaluation of saved models on a sample of 100 customers for deployment readiness.
    
-   - **Accuracy**: `Z`
-   - **Precision**: `Z`
-   - **Recall**: `Z`
-   - **F1-Score**: `Z`
-   - **ROC-AUC**: `Z`
+   - **Accuracy**: `0.958`
+   - **Precision**: `0.802`
+   - **Recall**: `0.931`
+   - **F1-Score**: `0.861`
+   - **ROC-AUC**: `0.9868`
 
 ## 📊 Results and Visualizations
+
+### Data Analysis Result
+
+#### Call Failures
+- Significant call failures in the range of 1-15 numbers.
+
+#### Complaints Distribution
+- Disproportionate distribution of complaints vs. non-complaints, requiring pre-processing before model training.
+
+#### Subscription Commitment
+- 75% of customers have subscriptions lasting 25-40 months, indicating moderate commitment.
+- 16% are long-term subscribers.
+
+#### Charge Amount
+- 94% of customers fall into the low charge bracket (0 to 3 units).
+
+#### Customer Activity
+- 75% of customers are active; 25% are non-active.
+- Non-active customers churn at a much higher rate (47%).
+
+#### Tariff Plans
+- 92% of customers are on Tariff Plan 1; only 8% prefer Tariff Plan 2.
+- Tariff Plan 1 users show higher churn rates (20%) compared to Tariff Plan 2 users (1%).
+
+#### Customer Value
+- 67% of customers have a value below 500 units.
+- Non-churned users have 4x the average customer value compared to churned users.
+
+#### Churn Rate
+- 15% of customers churned, with the imbalance needing adjustment during training.
+- Age Group 4 has the highest churn rate at 20%.
+
+#### Complaints and Churn
+- Customers with complaints have an 83% churn rate, compared to 10% for those without complaints.
+
+#### Age Group Analysis
+- Age Group 3 has the highest number of complaints.
+- Age Groups 2 and 3 have the highest customer value (~550 units).
+- Age Groups 2, 3, and 4 have the highest churn rates (17%, 16%, and 20%).
+
+#### Tariff Plans and Complaints
+- Tariff Plan 1 and Tariff Plan 2 have similar complaint rates (7.5% vs 7.7%).
+- Tariff Plan 1 users have longer subscription lengths but a higher churn rate.
+
+### Data Analysis Conclusion
+Efforts should focus on:
+1. Addressing complaints and call failures to reduce churn.
+2. Balancing the churn and complaint rate disparity during model training.
+3. Targeting retention efforts towards non-active users and high-churn age groups.
+
 
 ### SHAP Summary Plot
 This plot shows the impact of each feature on the model’s output.
 
 ![SHAP Summary Plot](path-to-shap-summary-plot)
 
-### Feature Importance Plot
-This plot highlights the most influential features in the churn prediction model.
-
-![Feature Importance Plot](path-to-feature-importance-plot)
 
 ## 🛠️ Installation & Setup
 
