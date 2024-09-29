@@ -18,14 +18,14 @@ More details can be found at the [UCI Repository](https://archive.ics.uci.edu/da
 
 - **Data Preprocessing**: Handling missing values, scaling, and outlier removal.
 - **Modeling with XGBoost**: Hyperparameter-tuned gradient boosting model.
-- **Class Imbalance Handling**: SMOTE technique for oversampling minority (churned) class.
+- **Class Imbalance Handling**: Using inbuilt scale_pos_weight parameter of XGBoost to handle class imbalance.
 - **Model Interpretability**: Using SHAP to explain feature importance and model behavior.
 - **Performance Metrics**: ROC curve, accuracy, precision, recall, and F1-score.
 
 ## 🔥 Why This Project Stands Out
 
 1. **Real-World Application**: Offers a practical solution for businesses to minimize customer churn and retain valuable customers.
-2. **Advanced Techniques**: XGBoost combined with SMOTE and GridSearchCV ensures robust predictions.
+2. **Advanced Techniques**: XGBoost with RandomSearchCV hyperparameter ensures robust predictions.
 3. **Explainable AI**: SHAP values make the model’s decisions transparent and understandable, which is crucial for business decisions.
 4. **Modular and Scalable**: Easily adaptable for other datasets and industries facing customer churn issues.
 
@@ -112,4 +112,4 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## 👏 Acknowledgments
 
 - Special thanks to the UCI Machine Learning Repository for the dataset.
-- Libraries used: `XGBoost`, `SHAP`, `SMOTE`, `Scikit-Learn`, `Pandas`, `Matplotlib`.
+- Libraries used: `XGBoost`, `SHAP`, `Scikit-Learn`, `Pandas`, `Matplotlib`.
